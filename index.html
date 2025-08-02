@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodTunes</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div id="brand">
+            <img src="./images/music.png" alt="logo" class="logo" id="logo-img">
+            <h1 class="brand-title">MoodTunes</h1>
+        </div>
+        <ul class="navigation-links">
+            <li class="nav-link">
+                <a href="#moodboard">MoodBoard</a>
+            </li>
+            <li class="nav-link">
+                <button id="add-song">Add Song</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="songAdd">
+        <form>
+            <label for="songName">Song: </label>
+            <input type="text" id="song-name" name="songName" placeholder="Enter the Song Name" required>
+            <br>
+            <label for="artistName">Artist: </label>
+            <input type="text" id="artist-name" name="artistName" placeholder="Enter the Artist Name" required>
+            <br>
+            <label for="mood">Mood: </label>
+            <select name="mood" id="mood">
+                <option value="" default>Select your current mood</option>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="romantic">Romantic</option>
+                <option value="chill">Chill</option>
+                <option value="energetic">Energetic</option>
+                <option value="melancholy">Melancholy</option>
+                <option value="nostalgic">Nostalgic</option>
+                <option value="angry">Angry</option>
+                <option value="hopeful">Hopeful</option>
+                <option value="peaceful">Peaceful</option>
+            </select>
+            <br>
+            <label for="song-link">Song link: </label>
+            <input type="text" name="song-link" id="song-link"
+                placeholder="Enter the song link(preferably spotify embed only)" required>
+            <button id="addSong">Add Song</button>
+        </form>
+    </section>
+
+    <section id="moodboard-cards">
+        <h1 id="moodboard-title">Hey, add some songs 😊</h1>
+        <h3 class="filter-title">Filter by mood: </h3>
+        <div class="categories">
+            <button class="category all" value="all">
+                All
+            </button>
+            <button class="category happy" value="happy">
+                Happy
+            </button>
+            <button class="category sad" value="sad">
+                Sad
+            </button>
+            <button class="category romantic" value="romantic">
+                Romantic
+            </button>
+            <button class="category chill" value="chill">
+                Chill
+            </button><button class="category energetic" value="energetic">
+                Energetic
+            </button>
+            <button class="category melancholy" value="melancholy">
+                Melancholy
+            </button>
+            <button class="category  nostalgic" value="nostalgic">
+                Nostalgic
+            </button>
+            <button class="category angry" value="angry">
+                Angry
+            </button>
+            <button class="category hopeful" value="hopeful">
+                Hopeful
+            </button>
+            <button class="category peaceful" value="peaceful">
+                Peaceful
+            </button>
+        </div>
+        <div id="moodboard">
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
